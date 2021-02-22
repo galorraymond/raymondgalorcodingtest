@@ -1,0 +1,40 @@
+<div class="country-detail">
+  <button class="country-detail-button" routerLink="/">
+    <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M8.22305 12.6631L3.93005 8.37009H13.5161V6.37009H3.93005L8.22305 2.07709L6.80905 0.663086L0.102051 7.37009L6.80905 14.0771L8.22305 12.6631Z" fill="black" />
+    </svg>
+    <span>Back</span>
+  </button>
+
+  <img class="country-detail-flag" [src]="country.flag" [alt]="country.name" *ngIf="country">
+
+  <section class="country-detail-info" *ngIf="country">
+    <h2 class="country-detail-title">{{ country.name }}</h2>
+
+    <div class="country-detail-left">
+      <p class="country-detail-text"><span class="country-detail-text--bold">Native Name:</span> {{ country.nativeName }} </p>
+      <p class="country-detail-text"><span class="country-detail-text--bold">Population:</span> {{ country.population }} </p>
+      <p class="country-detail-text"><span class="country-detail-text--bold">Region:</span> {{ country.region }}</p>
+      <p class="country-detail-text"><span class="country-detail-text--bold">Sub Region:</span> {{ country.subregion }} </p>
+      <p class="country-detail-text"><span class="country-detail-text--bold">Capital:</span> {{ country.capital }}</p>
+    </div>
+
+    <div class="country-detail-right">
+      <p class="country-detail-text"><span class="country-detail-text--bold">Top Level Domain:</span>
+        {{ country.topLevelDomain }}</p>
+      <p class="country-detail-text">
+        <span class="country-detail-text--bold">Currencies: </span>
+        <span *ngFor="let currency of country.currencies; let i = index">{{ currency.name }}{{ (i + 1) === country.currencies.length ? '' : ', ' }}</span>
+      </p>
+      <p class="country-detail-text">
+        <span class="country-detail-text--bold">Languages: </span>
+        <span *ngFor="let language of country.languages; let i = index">{{ language.name }}{{ (i + 1) === country.languages.length ? '' : ', ' }}</span>
+      </p>
+    </div>
+
+    <div class="country-detail-border-countries">
+      <p class="country-detail-text country-detail-text--bold">Border Countries:</p>
+      <div class="country-detail-border-country" *ngFor="let border of country.borders; let i = index">{{ border }}</div>
+    </div>
+  </section>
+</div>

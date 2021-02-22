@@ -1,0 +1,9 @@
+{
+  "name": "Raymond Galor Coding Test",
+  "short_name": "raymondgalorcodingtest",
+  "theme_color": "#202c37",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "scope": "./",
+  "start_url": "./"
+}

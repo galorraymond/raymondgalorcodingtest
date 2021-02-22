@@ -1,0 +1,60 @@
+.header {
+  background-color: var(--element-color);
+  color: var(--primary-text);
+  height: 7rem;
+  width: 100%;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $default-padding-lr;
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 0 1.7rem;
+  }
+
+  &-title {
+    font-size: 2.1rem;
+    cursor: pointer;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.7rem;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &-button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    padding: .5rem 1.2rem;
+
+    &:hover {
+      background-color: var(--btn-theme-color);
+    }
+  }
+
+  &-icon {
+    fill: var(--moon-background);
+    stroke: var(--primary-text);
+
+    path {
+      fill: var(--moon-background);
+      stroke: var(--primary-text);
+    }
+  }
+
+  &-text {
+    font-size: 1.45rem;
+    font-weight: 800;
+    margin-left: 1rem;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.3rem;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+$dark-blue: hsl(209, 23%, 22%);
+;
+$very-dark-blue-1: hsl(207, 26%, 17%);
+
+$very-dark-blue-2: hsl(200, 15%, 8%);
+$dark-gray: hsl(0, 0%, 52%);
+$very-light-gray: hsl(0, 0%, 98%);
+
+$white: hsl(0, 0%, 100%);
+$black: #000;
+
+// Light Mode
+:root {
+  --primary-text: #{$very-dark-blue-2};
+  --background: #{$very-light-gray};
+  --input-color: #{$dark-gray};
+  --element-color: #{$white};
+  --moon-background: transparent;
+  --search-color: #{rgba($dark-gray, .5)};
+  --back-color: #{$very-dark-blue-2};
+  --btn-theme-color: #{rgba($black, .1)};
+}
+
+// Dark Mode
+.dark {
+  --primary-text: #{$white};
+  --background: #{$very-dark-blue-1};
+  --input-color: #{$white};
+  --element-color: #{$dark-blue};
+  --moon-background: #{$white};
+  --search-color: #{rgba($white, .7)};
+  --back-color: #{rgba($white, .7)};
+  --btn-theme-color: #{rgba($white, .1)};
+}
+
+// Font Face
+$font-primary: 'Nunito Sans',
+sans-serif;
+
+// Font sizes
+$home-font-size: 1.4rem;
+$detail-font-size: 1.6rem;
+
+// Margin
+$default-padding: 5rem;
+$default-padding-lr: 0 5rem;
+$default-padding-tb: 5rem 0;
+
+$bp-large: 62.5em;
+$bp-medium: 50em;
+$bp-small: 38.125em;

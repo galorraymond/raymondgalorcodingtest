@@ -1,0 +1,26 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: inherit;
+  font-family: $font-primary;
+  background: var(--background);
+  font-weight: 300;
+  line-height: 1.6;
+  transition: all .5s;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}

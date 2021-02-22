@@ -1,0 +1,17 @@
+<div class="select">
+  <input class="select-check" id="select-chk" type="checkbox" [(ngModel)]="isSelectOpen"
+    (change)="detectCheckChange()" aria-label="Check Box" />
+  <label for="select-chk" class="select-label">
+    <span class="select-text">{{ placeholderText }}</span>
+
+    <svg class="select-icon" width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10.8091 0.663086L6.51608 4.95609L2.22308 0.663086L0.809082 2.07709L6.51608 7.78409L12.2231 2.07709L10.8091 0.663086Z" fill="black" />
+    </svg>
+  </label>
+  <div class="select-list" *ngIf="isSelectOpen" [@selectAnimation]>
+    <label for="select-chk" class="select-item" *ngFor="let region of regions"
+      [ngClass]="{ 'select-item--active': placeholderText === region.text }" (click)="select(region)">
+      {{ region.text }}
+    </label>
+  </div>
+</div>

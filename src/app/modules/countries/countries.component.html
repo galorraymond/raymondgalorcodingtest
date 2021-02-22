@@ -1,0 +1,13 @@
+<main class="countries">
+  <div class="countries-filter">
+    <app-search (textOnChange)="getCountriesByText($event)"></app-search>
+    <app-select (regionOnChange)="getCountriesByRegion($event)" [isActive]="isActive"
+      (checkOnChange)="isActive = $event"></app-select>
+  </div>
+  <div class="countries-body">
+    <app-country [@inOutAnimation] *ngFor="let country of countries; trackBy: countryTrackBy" [country]="country"
+      (click)="goToCountryDetail(country.name)"></app-country>
+  </div>
+</main>
+
+<app-scroll-top></app-scroll-top>

@@ -1,0 +1,13 @@
+<div class="country">
+  <img class="country-img" [src]="country.flag" [alt]="country.name">
+
+  <div class="country-body">
+    <div class="country-title">{{ country.name }}</div>
+
+    <div class="country-description">
+      <p class="country-text"><span class="country-text--bold">Population:</span> {{ country.population }}</p>
+      <p class="country-text"><span class="country-text--bold">Region:</span> {{ country.region }}</p>
+      <p class="country-text"><span class="country-text--bold">Capital:</span> {{ country.capital }}</p>
+    </div>
+  </div>
+</div>
